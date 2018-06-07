@@ -1,0 +1,1 @@
+<?phprequire'../users/class/config.php';require'../users/class/dbactions.php';$objCon = new Connection();$objCon->get_connected();$id_izo = $_GET['id_izo'];$update = mysql_query("UPDATE envio_certificado SET fecha_descarga = now(), estado = 'descargado'  where id_izo = '".$id_izo."' ");header('Location: ../archivos/CEM_Feb_2017.pdf');?>
